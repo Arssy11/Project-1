@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promo - Toko PC Jaya Sentosa</title>
+  <style>
+    :root {
+      --bg-color: #1e1e1e;
+      --text-color: white;
+      --card-bg: #2c2c2c;
+      --highlight: red;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      position: relative;
+    }
+
+    header h1 {
+      color: var(--highlight);
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
+      background-color: var(--card-bg);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 12px 0;
+      border-bottom: 2px solid var(--highlight);
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--highlight);
+    }
+
+    .section {
+      margin: 40px auto;
+      width: 90%;
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .section-title {
+      background: var(--highlight);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .promo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .promo-card {
+      background: #3a3a3a;
+      border-radius: 10px;
+      width: 280px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .promo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+
+    .promo-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .promo-card h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+
+    .discount {
+      background: var(--highlight);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    .back-btn {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      background: var(--highlight);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #b80000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Promo Spesial!</h1>
+  </header>
+
+  <nav>
+    <a href="index.html#pc">PC</a>
+    <a href="index.html#laptop">Laptop</a>
+    <a href="index.html#gpu">GPU</a>
+    <a href="index.html#mouse">Mouse</a>
+    <a href="index.html#monitor">Monitor</a>
+    <a href="index.html#keyboard">Keyboard</a>
+    <a href="promo.html">Promo</a>
+    <a href="tentang.html">Tentang Kami</a>
+  </nav>
+
+  <div class="section">
+    <div class="section-title">Promo Terbaru</div>
+    <div class="promo-container">
+      <div class="promo-card">
+        <img src="Gambar/Bundling1.jpeg" alt="Promo 1">
+        <h3>Pembelian Rtx 5070TI mendapatkan PSU Gratis</h3>
+        <p>Berlaku hingga 30 November 2025.</p>
+        <span class="discount">-15%</span>
+      </div>
+
+      <div class="promo-card">
+        <img src="Gambar/Bundling2.jpeg" alt="Promo 2">
+        <h3>Beli Laptop MSI Gaming Gratis Mouse Gaming dan Tas Laptop</h3>
+        <p>Setiap pembelian di atas Rp15.000.000</p>
+        <span class="discount">GRATIS</span>
+      </div>
+
+      <div class="promo-card">
+        <img src="Gambar/Bundling3.jpeg" alt="Promo 3">
+        <h3>Keyboard Combo</h3>
+        <p>Bundling hemat hingga Rp200.000</p>
+        <span class="discount">HEMAT Rp1JT</span>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-btn">⬅ Kembali ke Beranda</a>
+  </div>
+</body>
+</html>

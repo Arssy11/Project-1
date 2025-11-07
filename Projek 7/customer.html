@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Data Customer - Toko PC Jaya Sentosa</title>
+  <style>
+    :root {
+      --bg-color: #1e1e1e;
+      --text-color: white;
+      --card-bg: #2c2c2c;
+      --highlight: red;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      color: var(--highlight);
+      margin: 0;
+    }
+
+    .form-container {
+      width: 85%;
+      max-width: 600px;
+      margin: 40px auto;
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--highlight);
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea, select {
+      background-color: #222;
+      border: 1px solid var(--highlight);
+      border-radius: 6px;
+      padding: 10px;
+      color: white;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    button {
+      background-color: var(--highlight);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #b80000;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--highlight);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: #b80000;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Toko PC Jaya Sentosa</h1>
+  </header>
+
+  <div class="form-container">
+    <h2>📋 Form Data Customer</h2>
+    <form onsubmit="event.preventDefault(); alert('Data customer berhasil dikirim!'); this.reset();">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+
+      <label for="alamat">Alamat:</label>
+      <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap" required></textarea>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan email aktif" required>
+
+      <label for="kota">Kota:</label>
+      <input type="text" id="kota" name="kota" placeholder="Masukkan nama kota" required>
+
+      <label for="provinsi">Provinsi:</label>
+      <input type="text" id="provinsi" name="provinsi" placeholder="Masukkan nama provinsi" required>
+
+
+      <label for="nohp">No HP:</label>
+      <input type="text" id="nohp" name="nohp" placeholder="Masukkan nomor HP aktif" required>
+
+      <button type="submit">Kirim Data</button>
+    </form>
+
+    <div style="text-align: center;">
+      <a href="tentang.html" class="back-btn">⬅ Kembali ke Tentang Kami</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Toko PC Jaya Sentosa. Semua hak dilindungi.</p>
+  </footer>
+</body>
+</html>

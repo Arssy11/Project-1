@@ -1,0 +1,153 @@
+/* ====== Gaya Umum ====== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #b0c8ec;
+}
+
+/* ====== Header & Navigasi ====== */
+.header {
+  background-color: #237dad;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  background-color: #125d8a;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  position: sticky;
+  top: 60px;
+  z-index: 999;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #1f78b4;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #0b4f70;
+}
+
+/* ====== Struktur Halaman ====== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== GRID PRODUK HORIZONTAL ====== */
+.catalog-container {
+  display: grid;
+  grid-auto-flow: column; /* arah grid ke samping */
+  grid-auto-columns: minmax(250px, 1fr); /* lebar tiap kolom */
+  gap: 20px;
+  overflow-x: auto; /* aktifkan scroll horizontal */
+  scroll-snap-type: x mandatory; /* efek snap (menempel per produk) */
+  padding: 20px 0;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 80%;
+  border-radius: 15px 15px 0 0;
+}
+
+.product-card h3 {
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.product-card button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 15px;
+}
+
+.product-card button:hover {
+  background-color: #005f7f;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  scroll-margin-top: 130px;
+}
+
+/* ====== Footer ====== */
+footer {
+  background-color: #237dad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+
+/*
+html {
+  scroll-behavior: smooth;         efek scroll halus 
+  scroll-padding-top: 130px;       memberi jarak scroll otomatis sebesar tinggi navbar 
+}
+
+*/
+
+
+
+/* ====== Responsif (untuk HP) ====== */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .catalog-container {
+    grid-auto-columns: 80%;
+  }
+}

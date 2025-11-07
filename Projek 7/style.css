@@ -1,0 +1,120 @@
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: white;
+  --card-bg: #2c2c2c;
+  --highlight: red;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #111;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+header h1 {
+  color: var(--highlight);
+  margin: 0;
+}
+.mode-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 2px solid var(--highlight);
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.mode-toggle:hover {
+  background: var(--highlight);
+  color: white;
+}
+nav {
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--highlight);
+}
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--highlight);
+}
+.section {
+  margin: 40px auto;
+  width: 90%;
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.section-title {
+  background: var(--highlight);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px 0;
+}
+.product {
+  background: #3a3a3a;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+}
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.product h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+}
+.new-price {
+  color: var(--highlight);
+  font-weight: bold;
+}
+.light-mode {
+  --bg-color: #f5f5f5;
+  --text-color: #222;
+  --card-bg: white;
+  --highlight: #d40000;
+}

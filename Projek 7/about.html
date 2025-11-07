@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - TechStore</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a148c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #4a148c;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* ===== FAQ Section ===== */
+        .faq {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+            margin: 0;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .faq-item h3:hover {
+            color: #4a148c;
+        }
+
+        .faq-item h3::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-size: 22px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active h3::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #4a148c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+
+        a {
+            color: #4a148c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #4a148c;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background-color: #6a1b9a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tentang Kami</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Siapa Kami?</h2>
+            <p>
+                TechStore adalah platform e-commerce yang menyediakan berbagai komponen komputer berkualitas, mulai dari prosesor, kartu grafis, RAM, hingga monitor. 
+                Kami hadir untuk memberikan kemudahan bagi pengguna dalam mencari dan membandingkan produk teknologi terbaru dengan harga terbaik.
+            </p>
+        </section>
+
+        <section>
+            <h2>Visi & Misi</h2>
+            <p>
+                <strong>Visi:</strong> Menjadi pusat belanja teknologi terpercaya dan terlengkap di Indonesia.  
+            </p>
+            <p>
+                <strong>Misi:</strong>
+                <ul>
+                    <li>Menyediakan produk berkualitas dengan harga kompetitif.</li>
+                    <li>Memberikan pengalaman belanja online yang mudah dan aman.</li>
+                    <li>Menjadi mitra terpercaya bagi setiap pelanggan dalam dunia teknologi.</li>
+                </ul>
+            </p>
+        </section>
+
+        <section class="faq">
+            <h2>FAQ (Pertanyaan yang Sering Diajukan)</h2>
+
+            <div class="faq-item">
+                <h3>Apakah TechStore memiliki toko fisik?</h3>
+                <div class="faq-answer">
+                    <p>
+                        Saat ini kami beroperasi sepenuhnya secara online. Namun, kami bekerja sama dengan beberapa distributor resmi untuk memastikan produk yang dijual adalah original dan bergaransi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3>Bagaimana cara melakukan pemesanan?</h3>
+                <div class="faq-answer">
+                    <p>
+                        Anda dapat memilih produk dari halaman kategori, menambahkannya ke keranjang, dan melanjutkan ke proses checkout untuk pembayaran.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3>Apakah produk yang dijual bergaransi?</h3>
+                <div class="faq-answer">
+                    <p>
+                        Ya, semua produk yang kami jual memiliki garansi resmi dari produsen atau distributor.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3>Berapa lama waktu pengiriman?</h3>
+                <div class="faq-answer">
+                    <p>
+                        Waktu pengiriman biasanya memakan waktu 2–5 hari kerja tergantung lokasi Anda.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-btn">Kembali ke Beranda</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechStore. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        // Animasi buka/tutup FAQ
+        const faqItems = document.querySelectorAll('.faq-item h3');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                
+                // Tutup yang lain biar rapi
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    if (faq !== parent) faq.classList.remove('active');
+                });
+
+                // Toggle item yang diklik
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

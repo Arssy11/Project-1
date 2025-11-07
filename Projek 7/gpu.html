@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kategori GPU | Toko PC Jaya Sentosa</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Tambahan khusus untuk layout GPU */
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 produk per baris */
+      gap: 25px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    /* Responsif agar tetap rapi di HP */
+    @media (max-width: 900px) {
+      .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 produk per baris */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product-container {
+        grid-template-columns: 1fr; /* 1 produk per baris */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GPU</h1>
+    <button class="mode-toggle" onclick="toggleMode()">🌙 Dark</button>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="pc.html">PC</a>
+    <a href="laptop.html">Laptop</a>
+    <a href="gpu.html">GPU</a>
+    <a href="mouse.html">Mouse</a>
+    <a href="monitor.html">Monitor</a>
+    <a href="keyboard.html">Keyboard</a>
+  </nav>
+
+  <div class="section">
+    <div class="section-title">GPU</div>
+    <div class="product-container">
+      <div class="product">
+        <img src="Gambar/Gpu1.jpeg" alt="GPU 1">
+        <h3>NVIDIA RTX 4090</h3>
+        <p class="old-price">Rp35.000.000</p>
+        <p class="new-price">Rp32.500.000</p>
+      </div>
+
+      <div class="product">
+        <img src="Gambar/Gpu2.jpeg" alt="GPU 2">
+        <h3>AMD Radeon RX 7900 XT</h3>
+        <p class="old-price">Rp22.000.000</p>
+        <p class="new-price">Rp19.750.000</p>
+      </div>
+
+      <div class="product">
+        <img src="Gambar/Gpu3.jpeg" alt="GPU 3">
+        <h3>NVIDIA RTX 4070 Ti</h3>
+        <p class="old-price">Rp17.000.000</p>
+        <p class="new-price">Rp15.250.000</p>
+      </div>
+
+      <div class="product">
+        <img src="Gambar/Gpu4.jpeg" alt="GPU 4">
+        <h3>RTX 4060</h3>
+        <p class="old-price">Rp11.000.000</p>
+        <p class="new-price">Rp9.800.000</p>
+      </div>
+
+      <div class="product">
+        <img src="Gambar/GPu5.jpeg" alt="GPU 5">
+        <h3>RTX 4080</h3>
+        <p class="old-price">Rp28.000.000</p>
+        <p class="new-price">Rp25.999.000</p>
+      </div>
+
+      <div class="product">
+        <img src="Gambar/Gpu6.jpeg" alt="GPU 6">
+        <h3>Radeon RX 7800 XT</h3>
+        <p class="old-price">Rp18.000.000</p>
+        <p class="new-price">Rp16.250.000</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
